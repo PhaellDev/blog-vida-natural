@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Valle Sereno - Blog de vida natural con ideas sencillas sobre alimentación equilibrada, hábitos saludables y bienestar cotidiano.">
+<meta name="keywords" content="vida natural, alimentación saludable, hábitos equilibrados, bienestar, recetas naturales, estilo de vida">
+<meta name="author" content="Valle Sereno">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Valle Sereno - Ideas para una vida natural y equilibrada">
+<meta property="og:description" content="Contenido informativo sobre alimentación equilibrada, hábitos saludables y bienestar para quienes buscan un estilo de vida más natural.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phaelldev.github.io/blog-vida-natural/index.html">
+<link rel="canonical" href="https://phaelldev.github.io/blog-vida-natural/index.html">
+<title>Valle Sereno - Ideas para una Vida Natural y Equilibrada</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #3a3a3a;
+    background-color: #FFFDF8;
+  }
+  /* Header */
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #f0e6d2;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3E2A12;
+    text-decoration: none;
+  }
+  .logo span {
+    color: #D4A017;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  nav a {
+    color: #5a4a36;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  nav a:hover {
+    color: #D4A017;
+  }
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #FFF8E7 0%, #FBEAC8 100%);
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #3E2A12;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .hero p {
+    font-size: 1.1rem;
+    color: #5a4a36;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  /* Main content */
+  main {
+    padding: 3rem 0;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    color: #3E2A12;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  .section-subtitle {
+    text-align: center;
+    color: #7a6a52;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+  }
+  /* Cards */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #f3ead6;
+    box-shadow: 0 2px 8px rgba(62,42,18,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(62,42,18,0.10);
+  }
+  .card-image {
+    height: 180px;
+    background-color: #FFF8E7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+  .card-image.veggies { background: linear-gradient(135deg, #FBEAC8, #F2D89A); }
+  .card-image.fruits { background: linear-gradient(135deg, #FFF3D1, #FCE08A); }
+  .card-image.grains { background: linear-gradient(135deg, #F5DFA8, #E8C56B); }
+  .card-image.water { background: linear-gradient(135deg, #FFF8E7, #F0E2BC); }
+  .card-image.exercise { background: linear-gradient(135deg, #F8E7B0, #E6BE58); }
+  .card-image.sleep { background: linear-gradient(135deg, #EFD9A0, #D9B45A); }
+  .card-content {
+    padding: 1.5rem;
+  }
+  .card-content h3 {
+    color: #3E2A12;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  .card-content p {
+    color: #6e5f4a;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .card-content a {
+    color: #B8860B;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .card-content a:hover {
+    text-decoration: underline;
+  }
+  /* About section */
+  .about {
+    background: #fff;
+    padding: 3rem 0;
+    border-top: 1px solid #f0e6d2;
+    border-bottom: 1px solid #f0e6d2;
+  }
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about h2 {
+    color: #3E2A12;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .about p {
+    color: #5a4a36;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+  }
+  /* Tips section */
+  .tips {
+    padding: 3rem 0;
+  }
+  .tips-list {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+  }
+  .tips-list li {
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #D4A017;
+    box-shadow: 0 1px 3px rgba(62,42,18,0.04);
+  }
+  .tips-list h4 {
+    color: #3E2A12;
+    margin-bottom: 0.5rem;
+  }
+  .tips-list p {
+    color: #5a4a36;
+    font-size: 0.95rem;
+  }
+  /* Newsletter */
+  .newsletter {
+    background: linear-gradient(135deg, #4A3418, #3E2A12);
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .newsletter h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  .newsletter p {
+    margin-bottom: 2rem;
+    opacity: 0.92;
+  }
+  .newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .newsletter-form button {
+    background: #D4A017;
+    color: #3E2A12;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .newsletter-form button:hover {
+    background: #B8860B;
+    color: #fff;
+  }
+  /* Footer */
+  footer {
+    background: #3E2A12;
+    color: #fff;
+    padding: 2.5rem 0 1.5rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .footer-grid h4 {
+    margin-bottom: 1rem;
+    color: #E8C56B;
+  }
+  .footer-grid ul {
+    list-style: none;
+  }
+  .footer-grid li {
+    margin-bottom: 0.5rem;
+  }
+  .footer-grid a {
+    color: #d8cbb6;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .footer-grid a:hover {
+    color: #fff;
+  }
+  .footer-grid p {
+    color: #d8cbb6;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .footer-bottom {
+    border-top: 1px solid #4A3418;
+    padding-top: 1.5rem;
+    text-align: center;
+    color: #b8a98e;
+    font-size: 0.85rem;
+  }
+  .footer-bottom a {
+    color: #E8C56B;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 1.8rem; }
+    nav ul { gap: 1rem; font-size: 0.85rem; }
+    .newsletter-form { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo">Valle<span>Sereno</span></a>
+      <nav>
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre el blog</a></li>
+          <li><a href="#tips">Consejos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <h1>Bienvenido a Valle Sereno</h1>
+    <p>Un espacio tranquilo donde compartimos ideas sencillas sobre alimentación equilibrada, rutinas conscientes y bienestar cotidiano para quienes desean una vida más natural y serena.</p>
+  </div>
+</section>
+
+<!-- Cards -->
+<main>
+  <div class="container">
+    <h2 class="section-title">Artículos Destacados</h2>
+    <p class="section-subtitle">Explora nuestros contenidos sobre alimentación natural y bienestar diario</p>
+
+    <div class="cards-grid">
+      <article class="card">
+        <div class="card-image veggies">🥗</div>
+        <div class="card-content">
+          <h3>Más verduras en tu mesa</h3>
+          <p>Ideas prácticas para sumar vegetales frescos a tus comidas de cada día sin complicaciones y con buen sabor.</p>
+          <a href="#about">leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image fruits">🍎</div>
+        <div class="card-content">
+          <h3>Frutas de temporada</h3>
+          <p>Aprovecha lo que ofrece cada estación del año y descubre cómo elegir frutas frescas en su mejor momento.</p>
+          <a href="#about">leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image grains">🌾</div>
+        <div class="card-content">
+          <h3>Granos integrales</h3>
+          <p>Conoce distintas variedades de granos enteros y formas simples de incorporarlos a tus platos cotidianos.</p>
+          <a href="#about">leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image water">💧</div>
+        <div class="card-content">
+          <h3>Hidratación a lo largo del día</h3>
+          <p>Pequeños hábitos para acordarte de beber agua con regularidad y mantener una rutina más equilibrada.</p>
+          <a href="#about">leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image exercise">🧘</div>
+        <div class="card-content">
+          <h3>Movimiento y calma</h3>
+          <p>Sugerencias de actividades suaves para incluir en tu día y mantener el cuerpo activo de forma agradable.</p>
+          <a href="#about">leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image sleep">🌙</div>
+        <div class="card-content">
+          <h3>Descanso reparador</h3>
+          <p>La relación entre las rutinas, el reposo y el bienestar general, con ideas para noches más tranquilas.</p>
+          <a href="#about">leer artículo →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-content">
+      <h2>Sobre el blog</h2>
+      <p><strong>Valle Sereno</strong> nació con la idea de reunir información accesible sobre alimentación equilibrada, hábitos conscientes y bienestar general, contada de forma clara y cercana.</p>
+      <p>Creemos que los pequeños cambios en la rutina, sostenidos con calma, pueden marcar la diferencia con el tiempo. Nuestro contenido tiene un carácter informativo y educativo, y siempre invita a cada lector a buscar la orientación profesional adecuada según sus necesidades particulares.</p>
+      <p>Aquí encontrarás artículos, ideas y reflexiones sobre cómo cultivar un estilo de vida más natural, sencillo y sereno.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Tips -->
+<section class="tips" id="tips">
+  <div class="container">
+    <h2 class="section-title">Consejos para una rutina más equilibrada</h2>
+    <p class="section-subtitle">Hábitos sencillos que pueden aportar a tu día a día</p>
+
+    <ul class="tips-list">
+      <li>
+        <h4>1. Empieza la mañana con calma</h4>
+        <p>Dedicar unos minutos a un desayuno tranquilo y variado puede ayudarte a comenzar el día con buen ánimo. Combina frutas, granos integrales y otras opciones naturales que disfrutes.</p>
+      </li>
+      <li>
+        <h4>2. Prefiere alimentos en su forma natural</h4>
+        <p>Cuanto más cerca estén de su estado original, mejor. Frutas, verduras, legumbres y granos enteros pueden ser la base de una alimentación equilibrada.</p>
+      </li>
+      <li>
+        <h4>3. Mantén la hidratación presente</h4>
+        <p>Beber agua de forma regular es parte de una rutina cuidada. Tener una botella a la vista suele funcionar como un recordatorio sencillo y útil.</p>
+      </li>
+      <li>
+        <h4>4. Reserva tiempo para moverte</h4>
+        <p>Caminar, estirarte o hacer actividades suaves aporta al bienestar general. Lo importante es encontrar un movimiento que te resulte agradable y sostenible.</p>
+      </li>
+      <li>
+        <h4>5. Cuida tu descanso</h4>
+        <p>Un buen descanso es una pieza esencial de cualquier rutina serena. Intenta mantener horarios regulares y crear un ambiente tranquilo a la hora de dormir.</p>
+      </li>
+      <li>
+        <h4>6. Elige con conciencia</h4>
+        <p>Leer las etiquetas, conocer el origen de los alimentos y preferir opciones menos procesadas son pequeños gestos que suman a lo largo del tiempo.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <div class="container">
+    <h2>Recibe nuestro contenido</h2>
+    <p>Suscríbete para recibir ideas y novedades sobre alimentación natural y bienestar cotidiano.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte! Pronto estaremos en contacto.'); this.reset();">
+      <input type="email" placeholder="Tu mejor correo electrónico" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Valle Sereno</h4>
+        <p>Contenido informativo sobre alimentación equilibrada, hábitos conscientes y bienestar general, contado con calma.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre el blog</a></li>
+          <li><a href="#tips">Consejos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Información</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+          <li><a href="terms.html">Términos de Uso</a></li>
+          <li><a href="contact.html">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p><a href="mailto:contacto@vallesereno.com" style="color:#d8cbb6;text-decoration:none;">contacto@vallesereno.com</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">Horario de atención: lunes a viernes, de 9:00 a 18:00.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Valle Sereno. Todos los derechos reservados.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+        Este sitio tiene fines exclusivamente informativos. El contenido aquí publicado no sustituye la orientación de médicos, nutricionistas u otros profesionales de la salud debidamente cualificados.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
